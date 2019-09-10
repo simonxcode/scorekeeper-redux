@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-//stateless function component
+//stateless function component and event handler
 function Counter(props) {
   console.log('render', props)
   return (
@@ -13,8 +13,8 @@ function Counter(props) {
   );
 }
 
-//function to dispatch action
-function mapDispatchToProps(dispatch){
+//function to dispatch action and action generator
+function mapDispatchToProps(dispatch) {
   return {
     onIncrementClick: () => {
       console.log('incrementing');
@@ -29,11 +29,13 @@ function mapDispatchToProps(dispatch){
   }
 }
 
+//function to display current state
 function mapStateToProp(state) {
-  console.log('mapStateToProp', state);
+  console.log('winning score', state);
   return {
     count: state.count
   }
 }
 
+//connect component to store
 export default connect(mapStateToProp, mapDispatchToProps)(Counter);

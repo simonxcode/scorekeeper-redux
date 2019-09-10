@@ -6,9 +6,9 @@ function Counter(props) {
   console.log('render', props)
   return (
     <div>
-      <h1>I am a counter!</h1>
-      <p>Count: {props.count}</p>
+      <h1> Playing up to {props.count} </h1>
       <button onClick={props.onIncrementClick}>Increment</button>
+      <button onClick={props.onDecrementClick}>Decrement</button>
     </div>
   );
 }
@@ -17,8 +17,13 @@ function Counter(props) {
 function mapDispatchToProps(dispatch){
   return {
     onIncrementClick: () => {
-      console.log('clickin');
+      console.log('incrementing');
       const action = { type: 'INCREMENT'};
+      dispatch(action);
+    },
+    onDecrementClick: () => {
+      console.log('decrementing');
+      const action = {type: 'DECREMENT'};
       dispatch(action);
     }
   }

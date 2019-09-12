@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 //stateless function component
-function PlayerOne(props) {
+function PlayerTwo(props) {
   return (
     <div>
-      <p>Player one {props.playerOne}</p>
-      <button onClick={props.incrementPlayerOne}>Increase Score</button>
+      <p>Player two {props.playerTwo}</p>
+      <button onClick={props.incrementPlayerTwo}>Increase Score</button>
     </div>
   );
 } 
@@ -14,10 +14,10 @@ function PlayerOne(props) {
 //function to dispatch action and action generator(event handler)
 function mapDispatchToProps(dispatch) {
   return {
-     incrementPlayerOne: () => {
-       console.log('incrementing player 1');
+     incrementPlayerTwo: () => {
+       console.log('incrementing player 2');
        const action = {
-         type: 'INCREMENTONE'
+         type: 'INCREMENTTWO'
        };
        dispatch(action);
      }
@@ -26,13 +26,13 @@ function mapDispatchToProps(dispatch) {
 
 //function to display current state
 function mapStateToProp(state) {
-  console.log('player one score', state);
+  console.log('player two score', state);
   return {
-    playerOne: state.playerOne
+    playerTwo: state.playerTwo
   }
 }
 
-export default connect(mapStateToProp, mapDispatchToProps)(PlayerOne);
+export default connect(mapStateToProp, mapDispatchToProps)(PlayerTwo);
 
 
 

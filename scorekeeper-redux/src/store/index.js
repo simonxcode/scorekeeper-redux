@@ -1,7 +1,9 @@
 import { createStore } from 'redux';
 
+//initial state of winning score, player 1 score and player 2 score
 const initialState = {
-  count: 5
+  count: 5,
+  playerOne: 0
 };
 
 //reducer function for updating object 
@@ -13,6 +15,8 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {count: state.count + 1 });
     case 'DECREMENT':
       return Object.assign({}, state, {count: state.count - 1});
+    case 'INCREMENTONE':
+      return Object.assign({}, state, {playerOne: state.playerOne + 1});
     default: 
       return state;
   }

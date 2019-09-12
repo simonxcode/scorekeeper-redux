@@ -5,16 +5,16 @@ import { connect } from 'react-redux';
 function PlayerOne(props) {
   return (
     <div>
-      <p>Player one {props.count}</p>
-      <button onClick={props.onIncrementClick}>Increase Score</button>
+      <p>Player one {props.playerOne}</p>
+      <button onClick={props.incrementPlayerOne}>Increase Score</button>
     </div>
   );
 } 
 
-//function to dispatch action and action generator
+//function to dispatch action and action generator(event handler)
 function mapDispatchToProps(dispatch) {
   return {
-     onIncrementClick: () => {
+     incrementPlayerOne: () => {
        console.log('incrementing player 1');
        const action = {
          type: 'INCREMENTONE'
@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('player one score', state);
   return {
-    count: state.count
+    playerOne: state.playerOne
   }
 }
 

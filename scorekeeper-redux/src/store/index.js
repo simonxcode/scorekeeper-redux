@@ -28,3 +28,22 @@ const reducer = (state = initialState, action) => {
 const store = createStore(reducer);
 
 export default store;
+
+/*
+Game Winning Logic 
+- when a player wins display a message containing winning player name
+*/
+
+//1. create a variable for the winning message
+//2. winning message will contain a prop that is linked to the winner
+//3. include a visibility property and initially set to false
+//4. create logic that will compare `count` to `playerOne` an playerTwo` 
+  //create a new reducer for this logic and call it gameWinner
+  //will have to write a reducer to manage complete state of app
+//5. if 'playerOne` or `playerTwo` value is equal `count` gameWinner visibility is now true
+  //and player's names is pass into the gameWinner by prop 
+
+/*
+Do I need to create a new component with action and action generator for passing data to store?
+- yes, if you want to change the state of something 
+*/

@@ -31,7 +31,7 @@ function mapStateToProp(state) {
     playerTwo: state.playerTwo
   }
 }
-
+//connect component to store
 export default connect(mapStateToProp, mapDispatchToProps)(PlayerTwo);
 
 

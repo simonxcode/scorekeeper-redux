@@ -32,6 +32,7 @@ function mapStateToProp(state) {
   }
 }
 
+//connect component to store
 export default connect(mapStateToProp, mapDispatchToProps)(PlayerOne);
 
 

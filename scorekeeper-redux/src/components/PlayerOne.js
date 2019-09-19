@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('player one score', state);
   return {
-    playerOne: state.playerOne
+    playerOne: state.playerReducer.playerOne
   }
 }
 

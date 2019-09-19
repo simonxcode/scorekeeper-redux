@@ -33,7 +33,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('winning score', state);
   return {
-    count: state.count
+    count: state.winnerReducer.count
   }
 }
 

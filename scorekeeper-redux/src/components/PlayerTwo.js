@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('player two score', state);
   return {
-    playerTwo: state.playerTwo
+    playerTwo: state.playerReducer.playerTwo
   }
 }
 //connect component to store

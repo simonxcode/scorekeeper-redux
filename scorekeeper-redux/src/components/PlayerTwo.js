@@ -6,7 +6,11 @@ function PlayerTwo(props) {
   return (
     <div>
       <p>Player two {props.playerTwo}</p>
-      <button onClick={props.incrementPlayerTwo}>Increase Score</button>
+      <button 
+      onClick={props.incrementPlayerTwo}
+      disabled={props.playerTwo === props.count ? true:false}
+      >Increase Score
+      </button>
     </div>
   );
 } 
@@ -28,7 +32,8 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('player two score', state);
   return {
-    playerTwo: state.playerReducer.playerTwo
+    playerTwo: state.playerReducer.playerTwo,
+    count: state.winnerReducer.count
   }
 }
 //connect component to store

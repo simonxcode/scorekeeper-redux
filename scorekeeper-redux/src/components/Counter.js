@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
       console.log('decrementing');
       const action = {type: 'DECREMENT'};
       dispatch(action);
-    }
+    },
   }
 }
 

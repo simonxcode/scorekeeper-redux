@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-//function to display current state
+//function to retrieve current state
 function mapStateToProp(state) {
   console.log('player two score', state);
   return {

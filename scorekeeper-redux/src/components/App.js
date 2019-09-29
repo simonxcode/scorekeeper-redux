@@ -3,6 +3,7 @@ import Counter from './Counter';
 import PlayerOne from './PlayerOne';
 import PlayerTwo from './PlayerTwo';
 import store from '../store/';
+import Portal from './Portal';
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
       <div className="App">
         <Counter store={store} />  
         <PlayerOne store={store} />  
-        <PlayerTwo store={store} />  
+        <PlayerTwo store={store} /> 
+        <Portal />
       </div>
     );
   }

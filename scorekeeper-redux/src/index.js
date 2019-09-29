@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WinningScore from './actions/WinningScore';
+import App from './components/App';
 
-ReactDOM.render( < WinningScore / > , document.getElementById('root'));
+ReactDOM.render( <App /> , document.getElementById('root'));

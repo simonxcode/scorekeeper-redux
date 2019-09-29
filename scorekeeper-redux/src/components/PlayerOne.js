@@ -30,7 +30,7 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-//function to display current state
+//function to retrieve current state
 function mapStateToProp(state) {
   console.log('player one score', state);
   return {

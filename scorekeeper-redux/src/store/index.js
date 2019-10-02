@@ -14,6 +14,8 @@ const playerReducer = (state = playerDefaultState, action) => {
       return Object.assign({}, state, {playerOne: state.playerOne + 1});
     case 'INCREMENTTWO':
       return Object.assign({}, state, {playerTwo: state.playerTwo + 1});
+    case 'RESET':
+      return playerDefaultState;
     default: 
       return state;
   }

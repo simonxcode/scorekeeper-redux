@@ -6,7 +6,6 @@ function PlayerOne(props) {
   return (
     <div>
       <p>Player one {props.playerOne}</p>
-      <p>Winning score {props.count}</p>
       <button 
       onClick={props.incrementPlayerOne} 
       disabled={props.playerOne === props.count ? true:false}

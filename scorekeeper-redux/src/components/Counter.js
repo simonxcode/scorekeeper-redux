@@ -9,6 +9,7 @@ function Counter(props) {
       <h1> Playing up to {props.count} </h1>
       <button onClick={props.onIncrementClick}>Increment</button>
       <button onClick={props.onDecrementClick}>Decrement</button>
+      <button onClick={props.onResetClick}>Reset</button>
     </div>
   );
 }
@@ -24,6 +25,11 @@ function mapDispatchToProps(dispatch) {
     onDecrementClick: () => {
       console.log('decrementing');
       const action = {type: 'DECREMENT'};
+      dispatch(action);
+    },
+    onResetClick: () => {
+      console.log('reset score');
+      const action = {type: 'RESET'};
       dispatch(action);
     },
   }

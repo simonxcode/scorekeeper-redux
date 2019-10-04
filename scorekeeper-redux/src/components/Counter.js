@@ -8,7 +8,12 @@ function Counter(props) {
     <div>
       <h1> Playing up to {props.count} </h1>
       <button onClick={props.onIncrementClick}>Increment</button>
-      <button onClick={props.onDecrementClick}>Decrement</button>
+      <button 
+        onClick={props.onDecrementClick}
+        disabled={props.count === props.playerOne || props.PlayerTwo ? true:false}
+      >
+      Decrement
+      </button>
       <button onClick={props.onResetClick}>Reset</button>
     </div>
   );
@@ -39,7 +44,9 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProp(state) {
   console.log('winning score', state);
   return {
-    count: state.winnerReducer.count
+    count: state.winnerReducer.count,
+    playerOne: state.playerReducer.playerOne,
+    playerTwo: state.playerReducer.playerTwo
   }
 }
 

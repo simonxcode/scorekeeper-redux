@@ -7,6 +7,16 @@ function Counter(props) {
   return (
     <div>
       <h1> Playing up to {props.count} </h1>
+      {props.playerOne === props.count && props.playerOne !== 0 && (
+        <div>
+          <p>Player One is the Winner!</p>
+        </div>
+      )}
+         {props.playerTwo === props.count && props.playerTwo !== 0 && (
+        <div>
+          <p>Player Two is the Winner!</p>
+        </div>
+      )}
       <button onClick={props.onIncrementClick}>Increment</button>
       <button 
         onClick={props.onDecrementClick}
@@ -14,7 +24,7 @@ function Counter(props) {
       >
       Decrement
       </button>
-      <button onClick={props.onResetClick}>Reset</button>
+      <button onClick={props.onResetClick}>Reset Score</button>
     </div>
   );
 }

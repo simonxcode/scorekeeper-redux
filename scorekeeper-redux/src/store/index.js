@@ -1,6 +1,6 @@
 import { createStore, combineReducers } from 'redux';
 
-//initial state and player 1 score and player 2 score
+//initial state of player's score
 const playerDefaultState = {
   playerOne: 0,
   playerTwo: 0
@@ -14,8 +14,6 @@ const playerReducer = (state = playerDefaultState, action) => {
       return Object.assign({}, state, {playerOne: state.playerOne + 1});
     case 'INCREMENTTWO':
       return Object.assign({}, state, {playerTwo: state.playerTwo + 1});
-    case 'RESET':
-      return playerDefaultState;
     default: 
       return state;
   }
@@ -26,7 +24,7 @@ const winnerDefaultState = {
   count: 5
 }
 
-//reducer function for updating winning score 
+//reducer for updating winning score 
 const winnerReducer = (state = winnerDefaultState, action) => {
   console.log('winner reducer running', action);
   switch (action.type) {
@@ -43,32 +41,23 @@ const winnerReducer = (state = winnerDefaultState, action) => {
   }
 }
 
-// redux state container
-const store = createStore(
-  combineReducers({
-    playerReducer,
-    winnerReducer
-  })
-);
+//root reducer 
+const rootReducer = (state, action) => {
+  if (action.type === 'RESET') {
+    state = undefined;
+  }
+  return appReducer(state, action);
+}
 
+//combined reducer
+const appReducer = combineReducers({
+  playerReducer,
+  winnerReducer
+});
+
+
+// redux state container
+const store = createStore(rootReducer);
 
 export default store;
 
-/*
-Game Winning Logic 
-- when a player wins display a message containing winning player name
-*/
-
-//1. create a variable for the winning message
-//2. winning message will contain a prop that is linked to the winner
-//3. include a visibility property and initially set to false
-//4. create logic that will compare `count` to `playerOne` an playerTwo` 
-  //create a new reducer for this logic and call it gameWinner
-  //will have to write a reducer to manage complete state of app
-//5. if 'playerOne` or `playerTwo` value is equal `count` gameWinner visibility is now true
-  //and player's names is pass into the gameWinner by prop 
-
-/*
-Do I need to create a new component with action and action generator for passing data to store?
-- yes, if you want to change the state of something 
-*/

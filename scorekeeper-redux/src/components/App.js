@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Counter store={store} />  
-        <PlayerOne store={store} />  
+        <PlayerOne store={store} />   
         <PlayerTwo store={store} /> 
       </div>
     );

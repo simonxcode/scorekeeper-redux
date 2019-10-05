@@ -36,6 +36,7 @@ function mapStateToProp(state) {
     count: state.winnerReducer.count
   }
 }
+
 //connect component to store
 export default connect(mapStateToProp, mapDispatchToProps)(PlayerTwo);
 

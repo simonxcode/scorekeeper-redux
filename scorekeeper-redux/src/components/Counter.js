@@ -24,7 +24,13 @@ function Counter(props) {
       >
       Decrement
       </button>
-      <button onClick={props.onResetClick}>Reset Score</button>
+      <div>
+        <button
+        onClick={props.onResetClick}
+      >
+      Reset Game
+      </button>
+      </div>
     </div>
   );
 }
@@ -43,21 +49,21 @@ function mapDispatchToProps(dispatch) {
       dispatch(action);
     },
     onResetClick: () => {
-      console.log('reset score');
+      console.log('resetting game');
       const action = {type: 'RESET'};
       dispatch(action);
     },
   }
 }
 
-//function to display current state
+//function to retrieve current state
 function mapStateToProp(state) {
   console.log('winning score', state);
   return {
     count: state.winnerReducer.count,
     playerOne: state.playerReducer.playerOne,
     playerTwo: state.playerReducer.playerTwo
-  }
+  } 
 }
 
 //connect component to store

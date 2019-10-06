@@ -4,6 +4,37 @@ import { connect } from 'react-redux';
 //stateless function component and event handler
 function Counter(props) {
   console.log('render', props)
+
+  let decrement;
+  if(props.count === props.playerOne){
+        decrement = (
+        <button 
+          onClick={props.onDecrementClick}
+          disabled={true}
+        >
+        Decrement
+        </button> 
+        )
+      } else if (props.count === props.playerTwo) {
+        decrement = (
+        <button 
+          onClick={props.onDecrementClick}
+          disabled={true}
+        >
+        Decrement
+        </button>   
+        )
+      } else {
+       decrement = (
+        <button 
+          onClick={props.onDecrementClick}
+          disabled={false}
+        >
+        Decrement
+        </button>   
+        ) 
+      }  
+
   return (
     <div>
       <h1> Playing up to {props.count} </h1>
@@ -18,12 +49,7 @@ function Counter(props) {
         </div>
       )}
       <button onClick={props.onIncrementClick}>Increment</button>
-      <button 
-        onClick={props.onDecrementClick}
-        disabled={props.count === props.playerOne || props.PlayerTwo ? true:false}
-      >
-      Decrement
-      </button>
+      {decrement}
       <div>
         <button
         onClick={props.onResetClick}

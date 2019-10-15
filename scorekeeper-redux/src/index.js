@@ -1,5 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import PlayerOne from './containers/CounterComponent';
+import store from './store';
 
-ReactDOM.render( <App /> , document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <PlayerOne />
+  </Provider>,
+  document.getElementById('root')
+);
+

@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import PlayerOne from './containers/CounterComponent';
+import PlayerOneComponent from './containers/PlayerOneComponent';
+import PlayerTwoComponent from './containers/PlayerTwoComponent';
 import store from './store';
 
 render(
   <Provider store={store}>
-    <PlayerOne />
+    <PlayerOneComponent />
+    <PlayerTwoComponent />
   </Provider>,
   document.getElementById('root')
 );

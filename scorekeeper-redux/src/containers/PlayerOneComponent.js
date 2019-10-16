@@ -3,18 +3,16 @@ import Button from '../components/Button';
 import { connect } from 'react-redux';
 import { incrementOne } from '../actions/index';
 
-class PlayerOne extends Component {
-
-  handleBtnActionIncrement = () => {
-    this.props.onIncrementClick(this.props.playerOne)
+class PlayerOneComponent extends Component {
+  incrementPlayerOne = () => {
+    this.props.onIncrementOne(this.props.playerOne)
   }
-  
   render() {
     const {playerOne}=this.props
     return (
       <div>
         <h1>Player 1 Score: {playerOne}</h1>
-        <Button action={this.handleBtnActionIncrement} buttonTitle ='+'/>
+        <Button action={this.incrementPlayerOne} buttonTitle ='+'/>
       </div>
     );
   }
@@ -24,14 +22,15 @@ class PlayerOne extends Component {
 const mapStateToProp = (state) => {
   console.log('Player 1 score', state)
   return {
-    playerOne: state.counter.playerOne
+    playerOne: state.playerOneCounter.playerOne
   }
 }
+
 
 //function to dispatch action and action generator(event handler)
 const mapDispatchToProps = (dispatch) => {
   return {
-    onIncrementClick: (playerOne) => {
+    onIncrementOne: (playerOne) => {
       console.log('Incrementing Player 1')
       dispatch(incrementOne(playerOne))
     }
@@ -39,7 +38,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 //connect component to store
-export default connect(mapStateToProp, mapDispatchToProps)(PlayerOne);
+export default connect(mapStateToProp, mapDispatchToProps)(PlayerOneComponent);
 
 //stateless function component
 // function PlayerOne(props) {

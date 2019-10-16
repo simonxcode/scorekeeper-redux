@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import CounterReducer from './CounterReducer';
+import PlayerOneReducer from './PlayerOneReducer';
+import PlayerTwoReducer from './PlayerTwoReducer';
 
 // const rootReducer = (state, action) => {
 //   if (action.type === 'RESET') {
@@ -13,7 +14,8 @@ import CounterReducer from './CounterReducer';
 // });
 
 export default combineReducers({
-  counter: CounterReducer,
+  playerOneCounter: PlayerOneReducer,
+  playerTwoCounter: PlayerTwoReducer
 });
 
 

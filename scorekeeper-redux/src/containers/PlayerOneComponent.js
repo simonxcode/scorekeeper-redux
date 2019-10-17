@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import Button from '../components/Button';
 import { connect } from 'react-redux';
 import { incrementOne } from '../actions/index';
@@ -19,13 +19,12 @@ class PlayerOneComponent extends Component {
 }
 
 //function to retrieve current state
-const mapStateToProp = (state) => {
+const mapStateToProps = (state) => {
   console.log('Player 1 score', state)
   return {
-    playerOne: state.playerOneCounter.playerOne
+    playerOne: state.playerOneReducer.playerOne
   }
 }
-
 
 //function to dispatch action and action generator(event handler)
 const mapDispatchToProps = (dispatch) => {
@@ -38,7 +37,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 //connect component to store
-export default connect(mapStateToProp, mapDispatchToProps)(PlayerOneComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerOneComponent);
 
 //stateless function component
 // function PlayerOne(props) {

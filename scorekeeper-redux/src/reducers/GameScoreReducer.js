@@ -10,6 +10,10 @@ function gameScoreReducer (state = gameScoreDefaultState, action) {
       return {
         ...state, ...action
       };
+    case 'DECREMENT_GAME':
+      return {
+        ...state, ...action
+      };
     default:
       return state;
   }

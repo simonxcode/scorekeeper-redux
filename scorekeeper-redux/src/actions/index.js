@@ -24,3 +24,13 @@ export const incrementGame = count => {
   }
 }
 
+export const decrementGame = count => {
+  const num = count - 1
+  return {
+    type: 'DECREMENT_GAME',
+    gameScore: num
+  }
+}
+
+
+

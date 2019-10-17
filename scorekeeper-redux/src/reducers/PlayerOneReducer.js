@@ -4,7 +4,7 @@ const playerOneDefaultState = {
 
 function playerOneReducer (state = playerOneDefaultState, action) {
   switch(action.type) {
-    case 'INCREMENTONE':
+    case 'INCREMENT_ONE':
       return {
         ...state, ...action
       };

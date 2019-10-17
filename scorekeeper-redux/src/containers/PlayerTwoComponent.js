@@ -19,13 +19,12 @@ class PlayerTwoComponent extends Component {
 }
 
 //function to retrieve current state
-const mapStateToProp = (state) => {
+const mapStateToProps = (state) => {
   console.log('Player 2 score', state)
   return {
     playerTwo: state.playerTwoCounter.playerTwo
   }
 }
-
 
 //function to dispatch action and action generator(event handler)
 const mapDispatchToProps = (dispatch) => {
@@ -38,7 +37,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 //connect component to store
-export default connect(mapStateToProp, mapDispatchToProps)(PlayerTwoComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerTwoComponent);
 
 
 

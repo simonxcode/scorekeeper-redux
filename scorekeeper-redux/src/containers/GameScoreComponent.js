@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '../components/Button';
 import { connect } from 'react-redux';
-import { incrementGame, decrementGame } from '../actions/index';
+import { incrementGame, decrementGame, resetGame } from '../actions/index';
 
 //this component will execute the action generator function 
 class GameComponent extends Component {
@@ -14,6 +14,10 @@ class GameComponent extends Component {
     this.props.onDecrementGame(this.props.gameScore)
   }
 
+  resetGame = () => {
+    this.props.onResetGame(this.props.gameScore)
+  }
+
 
   render() {
     const {gameScore}=this.props
@@ -22,6 +26,7 @@ class GameComponent extends Component {
         <h1>Game Score: {gameScore}</h1>
         <Button action={this.incrementGame} buttonTitle='+' />
         <Button action={this.decrementGame} buttonTitle='-' />
+        <Button action={this.resetGame} buttonTitle='Reset Game' />
       </div>
     );
   }
@@ -31,7 +36,7 @@ class GameComponent extends Component {
 const mapStateToProps = (state) => {
   console.log('Game Score', state)
   return {
-    gameScore: state.gameScoreCounter.gameScore
+    gameScore: state.gameScoreReducer.gameScore
   }
 }
 
@@ -45,6 +50,10 @@ const mapDispatchToProps = (dispatch) => {
     onDecrementGame: (gameScore) => {
       console.log('Decrementing Game Score')
       dispatch(decrementGame(gameScore))
+    },
+    onResetGame: (gameScore) => {
+      console.log('Resetting Game Score')
+      dispatch(resetGame(gameScore))
     }
   }
 } 

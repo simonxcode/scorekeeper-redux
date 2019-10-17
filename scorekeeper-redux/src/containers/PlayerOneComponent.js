@@ -22,7 +22,7 @@ class PlayerOneComponent extends Component {
 const mapStateToProps = (state) => {
   console.log('Player 1 score', state)
   return {
-    playerOne: state.playerOneCounter.playerOne
+    playerOne: state.playerOneReducer.playerOne
   }
 }
 

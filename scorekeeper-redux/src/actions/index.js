@@ -32,5 +32,13 @@ export const decrementGame = count => {
   }
 }
 
+export const resetGame = count => {
+  const num = count 
+  return {
+    type: 'RESET_GAME',
+    gameScore: num
+  }
+}
+
 
 

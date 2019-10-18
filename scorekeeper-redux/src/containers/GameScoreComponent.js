@@ -21,9 +21,21 @@ class GameComponent extends Component {
 
   render() {
     const {gameScore}=this.props
+    const {playerOne}=this.props
+    const {playerTwo}=this.props
     return (
       <div>
-        <h1>Game Score: {gameScore}</h1>
+        <h1>Playing up to: {gameScore}</h1>
+          {playerOne === gameScore && playerOne !== 0 && (
+            <div>
+              <p>Player One is the Winner!</p>
+            </div>
+          )}
+          {playerTwo === gameScore && playerTwo !== 0 && (
+            <div>
+              <p>Player Two is the Winner!</p>
+            </div>
+          )}
         <Button action={this.incrementGame} buttonTitle='+' />
         <Button action={this.decrementGame} buttonTitle='-' />
         <Button action={this.resetGame} buttonTitle='Reset Game' />
@@ -36,7 +48,9 @@ class GameComponent extends Component {
 const mapStateToProps = (state) => {
   console.log('Game Score', state)
   return {
-    gameScore: state.gameScoreReducer.gameScore
+    gameScore: state.gameScoreReducer.gameScore,
+    playerOne: state.playerOneReducer.playerOne,
+    playerTwo: state.playerTwoReducer.playerTwo
   }
 }
 

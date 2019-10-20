@@ -1,28 +1,51 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from '../components/Button';
-import { connect } from 'react-redux';
-import { incrementGame, decrementGame, resetGame } from '../actions/index';
+import {connect} from 'react-redux';
+import {incrementGame, decrementGame, resetGame} from '../actions/index';
 
 //this component will execute the action generator function 
 class GameComponent extends Component {
-
   incrementGame = () => {
     this.props.onIncrementGame(this.props.gameScore)
   }
-
   decrementGame = () => {
     this.props.onDecrementGame(this.props.gameScore)
   }
-
   resetGame = () => {
     this.props.onResetGame(this.props.gameScore)
   }
-
-
   render() {
     const {gameScore}=this.props
     const {playerOne}=this.props
     const {playerTwo}=this.props
+    
+    //logic for disabling decrement button
+    let decrement;
+    if (gameScore === playerOne) {
+      decrement = (
+        <Button 
+          action={this.decrementGame} 
+          buttonTitle='-' 
+          disabled={true}
+        />
+      )
+    } else if (gameScore === playerTwo) {
+      decrement = (
+        <Button 
+          action={this.decrementGame} 
+          buttonTitle='-' 
+          disabled={true}
+        /> 
+      )
+    } else {
+      decrement = (
+        <Button 
+          action={this.decrementGame} 
+          buttonTitle='-' 
+          disabled={false}
+        /> 
+      )  
+    }
     return (
       <div>
         <h1>Playing up to: {gameScore}</h1>
@@ -37,7 +60,7 @@ class GameComponent extends Component {
             </div>
           )}
         <Button action={this.incrementGame} buttonTitle='+' />
-        <Button action={this.decrementGame} buttonTitle='-' />
+        {decrement} 
         <Button action={this.resetGame} buttonTitle='Reset Game' />
       </div>
     );

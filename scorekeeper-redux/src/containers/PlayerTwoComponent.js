@@ -1,7 +1,7 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import Button from '../components/Button';
-import { connect } from 'react-redux';
-import { incrementTwo } from '../actions/index';
+import {connect} from 'react-redux';
+import {incrementTwo} from '../actions/index';
 
 class PlayerTwoComponent extends Component {
   incrementPlayerTwo = () => {
@@ -9,10 +9,15 @@ class PlayerTwoComponent extends Component {
   }
   render() {
     const {playerTwo}=this.props
+    const {gameScore}=this.props
     return (
       <div>
         <h1>Player 2 Score: {playerTwo}</h1>
-        <Button action={this.incrementPlayerTwo} buttonTitle ='+'/>
+        <Button
+         action={this.incrementPlayerTwo} 
+         buttonTitle ='+'
+         disabled={playerTwo === gameScore ? true:false}
+         />
       </div>
     );
   }
@@ -22,7 +27,8 @@ class PlayerTwoComponent extends Component {
 const mapStateToProps = (state) => {
   console.log('Player 2 score', state)
   return {
-    playerTwo: state.playerTwoReducer.playerTwo
+    playerTwo: state.playerTwoReducer.playerTwo,
+    gameScore: state.gameScoreReducer.gameScore
   }
 }
 

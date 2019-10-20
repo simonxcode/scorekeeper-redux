@@ -1,7 +1,7 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import Button from '../components/Button';
-import { connect } from 'react-redux';
-import { incrementTwo } from '../actions/index';
+import {connect} from 'react-redux';
+import {incrementTwo} from '../actions/index';
 
 class PlayerTwoComponent extends Component {
   incrementPlayerTwo = () => {

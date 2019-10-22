@@ -8,16 +8,42 @@ class PlayerTwoComponent extends Component {
     this.props.onIncrementTwo(this.props.playerTwo)
   }
   render() {
+    const {playerOne}=this.props
     const {playerTwo}=this.props
     const {gameScore}=this.props
+
+     /* logic for disabling player 2 button if player 2 or player 1 
+    score matches game score */
+    let incrementButtonTwo;
+    if(gameScore === playerTwo) {
+      incrementButtonTwo = (
+        <Button 
+          action={this.incrementPlayerTwo}
+          buttonTitle='+'
+          disabled={true}
+        />
+      )
+    } else if(gameScore === playerOne) {
+      incrementButtonTwo = (
+        <Button 
+          action={this.incrementPlayerTwo}
+          buttonTitle='+'
+          disabled={true}
+        />
+      )
+    } else {
+      incrementButtonTwo = (  
+        <Button 
+          action={this.incrementPlayerTwo}
+          buttonTitle='+'
+          disabled={false}
+        />
+      )
+    }
     return (
       <div>
         <h1>Player 2 Score: {playerTwo}</h1>
-        <Button
-         action={this.incrementPlayerTwo} 
-         buttonTitle ='+'
-         disabled={playerTwo === gameScore ? true:false}
-         />
+        {incrementButtonTwo}
       </div>
     );
   }
@@ -27,6 +53,7 @@ class PlayerTwoComponent extends Component {
 const mapStateToProps = (state) => {
   console.log('Player 2 score', state)
   return {
+    playerOne: state.playerOneReducer.playerOne,
     playerTwo: state.playerTwoReducer.playerTwo,
     gameScore: state.gameScoreReducer.gameScore
   }

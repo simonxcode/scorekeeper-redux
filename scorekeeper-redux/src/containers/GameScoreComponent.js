@@ -69,7 +69,6 @@ class GameComponent extends Component {
 
 //function to retrieve current state
 const mapStateToProps = (state) => {
-  console.log('Game Score', state)
   return {
     gameScore: state.gameScoreReducer.gameScore,
     playerOne: state.playerOneReducer.playerOne,
@@ -81,15 +80,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onIncrementGame: (gameScore) => {
-      console.log('Incrementing Game Score')
       dispatch(incrementGame(gameScore))
     },
     onDecrementGame: (gameScore) => {
-      console.log('Decrementing Game Score')
       dispatch(decrementGame(gameScore))
     },
     onResetGame: (gameScore) => {
-      console.log('Resetting Game Score')
       dispatch(resetGame(gameScore))
     }
   }

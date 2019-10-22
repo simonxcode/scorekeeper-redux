@@ -40,7 +40,6 @@ class PlayerOneComponent extends Component {
         />
       )
     }
-    
     return (
       <div>
         <h1>Player 1 Score: {playerOne}</h1>
@@ -52,7 +51,6 @@ class PlayerOneComponent extends Component {
 
 //function to retrieve current state
 const mapStateToProps = (state) => {
-  console.log('Player 1 score', state)
   return {
     playerOne: state.playerOneReducer.playerOne,
     playerTwo: state.playerTwoReducer.playerTwo,
@@ -64,7 +62,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onIncrementOne: (playerOne) => {
-      console.log('Incrementing Player 1')
       dispatch(incrementOne(playerOne))
     }
   }

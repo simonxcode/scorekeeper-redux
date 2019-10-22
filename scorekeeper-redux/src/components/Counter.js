@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 //stateless function component and event handler
 function Counter(props) {
-  console.log('render', props)
 
   let decrement;
   if(props.count === props.playerOne){
@@ -65,17 +64,14 @@ function Counter(props) {
 function mapDispatchToProps(dispatch) {
   return {
     onIncrementClick: () => {
-      console.log('incrementing');
       const action = { type: 'INCREMENT'};
       dispatch(action);
     },
     onDecrementClick: () => {
-      console.log('decrementing');
       const action = {type: 'DECREMENT'};
       dispatch(action);
     },
     onResetClick: () => {
-      console.log('resetting game');
       const action = {type: 'RESET'};
       dispatch(action);
     },
@@ -84,7 +80,6 @@ function mapDispatchToProps(dispatch) {
 
 //function to retrieve current state
 function mapStateToProp(state) {
-  console.log('winning score', state);
   return {
     count: state.winnerReducer.count,
     playerOne: state.playerReducer.playerOne,

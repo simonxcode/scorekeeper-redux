@@ -3,7 +3,7 @@ const playerTwoDefaultState = {
 }
 
 function playerTwoReducer(state = playerTwoDefaultState, action) {
-  switch (action.type) {
+  switch(action.type) {
     case 'INCREMENT_TWO':
       return {
         ...state, ...action

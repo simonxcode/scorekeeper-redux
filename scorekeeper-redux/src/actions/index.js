@@ -14,8 +14,6 @@ export const incrementTwo = count => {
   }
 }
 
-//this is the action object, it purpose is to send information to the store 
-//must have a type property defined as string literal to define the type of action to perform
 export const incrementGame = count => {
   const num = count + 1
   return {

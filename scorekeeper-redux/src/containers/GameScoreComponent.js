@@ -3,7 +3,6 @@ import Button from '../components/Button';
 import {connect} from 'react-redux';
 import {incrementGame, decrementGame, resetGame} from '../actions/index';
 
-//this component will execute the action generator function 
 class GameComponent extends Component {
   incrementGame = () => {
     this.props.onIncrementGame(this.props.gameScore)
@@ -18,9 +17,11 @@ class GameComponent extends Component {
     const {gameScore}=this.props
     const {playerOne}=this.props
     const {playerTwo}=this.props
-    
-    //logic for disabling decrement button
+
+     //container for storing Button element to decrement game score 
     let decrement;
+
+    //prevent game score from falling below player's score
     if (gameScore === playerOne) {
       decrement = (
         <Button 
@@ -67,9 +68,7 @@ class GameComponent extends Component {
   }
 }
 
-//function to retrieve current state
 const mapStateToProps = (state) => {
-  console.log('Game Score', state)
   return {
     gameScore: state.gameScoreReducer.gameScore,
     playerOne: state.playerOneReducer.playerOne,
@@ -77,23 +76,18 @@ const mapStateToProps = (state) => {
   }
 }
 
-//function to dispath action and action generator(event handler)
 const mapDispatchToProps = (dispatch) => {
   return {
     onIncrementGame: (gameScore) => {
-      console.log('Incrementing Game Score')
       dispatch(incrementGame(gameScore))
     },
     onDecrementGame: (gameScore) => {
-      console.log('Decrementing Game Score')
       dispatch(decrementGame(gameScore))
     },
     onResetGame: (gameScore) => {
-      console.log('Resetting Game Score')
       dispatch(resetGame(gameScore))
     }
   }
 } 
 
-//export component to store
 export default connect(mapStateToProps, mapDispatchToProps)(GameComponent)

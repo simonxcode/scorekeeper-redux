@@ -12,9 +12,13 @@ class PlayerTwoComponent extends Component {
     const {playerTwo}=this.props
     const {gameScore}=this.props
 
-     /* logic for disabling player 2 button if player 2 or player 1 
-    score matches game score */
+    //container for storing Button element to increment player 2 score
     let incrementButtonTwo;
+
+    /*
+    prevent player 2 score from being higher than game score and
+    prevent final score from being a tie 
+    */
     if(gameScore === playerTwo) {
       incrementButtonTwo = (
         <Button 
@@ -49,9 +53,7 @@ class PlayerTwoComponent extends Component {
   }
 }
 
-//function to retrieve current state
 const mapStateToProps = (state) => {
-  console.log('Player 2 score', state)
   return {
     playerOne: state.playerOneReducer.playerOne,
     playerTwo: state.playerTwoReducer.playerTwo,
@@ -59,7 +61,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-//function to dispatch action and action generator(event handler)
 const mapDispatchToProps = (dispatch) => {
   return {
     onIncrementTwo: (playerTwo) => {
@@ -69,7 +70,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-//connect component to store
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerTwoComponent);
 
 

@@ -1,9 +1,7 @@
-//default state of count for game score
 const gameScoreDefaultState = {
   gameScore: 5
 }
 
-//reducer function to update state when action case is called
 function gameScoreReducer (state = gameScoreDefaultState, action) {
   switch(action.type){
     case 'INCREMENT_GAME':

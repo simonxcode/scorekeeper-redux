@@ -1,5 +1,4 @@
 import React from 'react';
-//why don't we need to import '../index.scss'
 
 const Button = (props) => {
   return (

@@ -62,7 +62,7 @@ class GameComponent extends Component {
           )}
         <Button action={this.incrementGame} buttonTitle='+' />
         {decrement} 
-        <Button action={this.resetGame} buttonTitle='Reset Game' />
+        <Button action={this.resetGame} buttonTitle='Reset Game' className='reset-button' />
       </div>
     );
   }

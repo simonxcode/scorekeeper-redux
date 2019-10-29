@@ -4,11 +4,13 @@ import { Provider } from 'react-redux';
 import PlayerOneComponent from './containers/PlayerOneComponent';
 import PlayerTwoComponent from './containers/PlayerTwoComponent';
 import GameScoreComponent from './containers/GameScoreComponent';
+import Header from './components/Header';
 import store from './store';
 import './styles/styles.scss';
 
 render(
   <Provider store={store}>
+    <Header />
     <GameScoreComponent />
     <PlayerOneComponent />
     <PlayerTwoComponent />

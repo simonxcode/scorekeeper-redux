@@ -48,8 +48,12 @@ class GameComponent extends Component {
       )  
     }
     return (
-      <div>
-        <h1>Playing up to: {gameScore}</h1>
+      <div className='game-score'>
+        <div className='game-score__title'>
+          Playing up to: 
+          <div className='game-score__subtitle'>
+            {gameScore}
+          </div>
           {playerOne === gameScore && playerOne !== 0 && (
             <div>
               <p>Player One is the Winner!</p>
@@ -60,9 +64,10 @@ class GameComponent extends Component {
               <p>Player Two is the Winner!</p>
             </div>
           )}
-        <Button action={this.incrementGame} buttonTitle='+' />
-        {decrement} 
-        <Button action={this.resetGame} buttonTitle='Reset Game' className='reset-button' />
+          <Button action={this.incrementGame} buttonTitle='+' />
+          {decrement} 
+          <Button action={this.resetGame} buttonTitle='Reset Game' className='reset-button' />
+        </div>
       </div>
     );
   }

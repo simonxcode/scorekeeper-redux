@@ -7,6 +7,14 @@
   margin: 0;
 }
 
-.game-score__subtitle {
+.game-score__winning-score {
   font-size: $l-size;  
+}
+
+.game-score__winning-message, p {
+  font-size: $l-size;
+}
+
+.game-score__buttons {
+  display: inline-block;
 }

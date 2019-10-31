@@ -22,6 +22,7 @@ class PlayerOneComponent extends Component {
     if(gameScore === playerOne) {
       incrementButtonOne = (
         <Button 
+          className='player-increment__button'
           action={this.incrementPlayerOne}
           buttonTitle='+'
           disabled={true}
@@ -30,6 +31,7 @@ class PlayerOneComponent extends Component {
     } else if(gameScore === playerTwo) {
       incrementButtonOne = (
         <Button 
+          className='player-increment__button'
           action={this.incrementPlayerOne}
           buttonTitle='+'
           disabled={true}
@@ -37,7 +39,8 @@ class PlayerOneComponent extends Component {
       )
     } else {
       incrementButtonOne = (
-        <Button 
+        <Button  
+          className='player-increment__button'
           action={this.incrementPlayerOne}
           buttonTitle='+'
           disabled={false}
@@ -45,9 +48,16 @@ class PlayerOneComponent extends Component {
       )
     }
     return (
-      <div>
-        <h1>Player 1 Score: {playerOne}</h1>
-        {incrementButtonOne}
+      <div className='player-container'>
+        <div className='player-title'>
+          Player 1:
+        </div>
+        <div className='player-score'>
+          {playerOne}
+        </div>
+        <div>
+         {incrementButtonOne}
+        </div>
       </div>
     );
   }

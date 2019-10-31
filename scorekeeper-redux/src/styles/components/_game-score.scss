@@ -4,9 +4,17 @@
 }
 
 .game-score__title {
-  margin: 0;
+  margin: 0; //what does this actually do?
 }
 
-.game-score__subtitle {
+.game-score__winning-score {
   font-size: $l-size;  
+}
+
+.game-score__winning-message, p {
+  font-size: $l-size;
+}
+
+.game-score__buttons {
+  display: inline-block;
 }

@@ -1,0 +1,19 @@
+.player-container {
+  background: $off-black;
+  color: $off-white;
+  display: inline-block;
+  margin: $m-size;
+}
+
+.player-title {
+  margin: 0; //what does this actually do?
+}
+
+.player-score {
+  font-size: $l-size;
+}
+
+
+
+
+

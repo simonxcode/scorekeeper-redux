@@ -10,11 +10,15 @@ import './styles/styles.scss';
 
 render(
   <Provider store={store}>
+  <div className='grid-container'>
     <Header />
     <GameScoreComponent />
     <PlayerOneComponent />
     <PlayerTwoComponent />
-  </Provider>,
+  </div>
+  </Provider>
+
+,
   document.getElementById('root')
 );
 

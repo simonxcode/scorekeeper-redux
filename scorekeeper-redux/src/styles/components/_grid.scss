@@ -1,0 +1,30 @@
+@import './header';
+@import './game-score';
+@import './player-score';
+
+
+.grid-container {
+  display: grid;
+  grid-gap: $s-size;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "game-score game-score"
+    "player-one player-two"
+}
+
+.header {
+  grid-area: header;
+}
+
+.game-score {
+  grid-area: game-score;
+}
+
+.player-one__container {
+  grid-area: player-one;
+}
+
+.player-two__container {
+  grid-area: player-two;
+}

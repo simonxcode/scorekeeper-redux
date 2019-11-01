@@ -48,11 +48,11 @@ class PlayerTwoComponent extends Component {
       )
     }
     return (
-      <div className='player-container'>
-        <div className='player-title'>
+      <div className='player-two'>
+        <div className='player-two__title'>
           Player 2:
         </div>
-        <div className='player-score'>
+        <div className='player-two__score'>
           {playerTwo}
         </div>
         <div>

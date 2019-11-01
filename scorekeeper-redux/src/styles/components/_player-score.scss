@@ -1,15 +1,15 @@
-.player-container {
+.player-one, .player-two {
   background: $off-black;
   color: $off-white;
   display: inline-block;
   margin: $m-size;
 }
 
-.player-title {
+.player-one__title, .player-two__title {
   margin: 0; //what does this actually do?
 }
 
-.player-score {
+.player-one__score, .player-two__score {
   font-size: $l-size;
 }
 

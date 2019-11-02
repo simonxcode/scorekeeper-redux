@@ -53,14 +53,14 @@ class GameComponent extends Component {
           Playing up to: 
           <div className='game-score__winning-score'>
             {gameScore}
+          </div>
           <div className='game-score__winning-message'>
-        </div>
-          {playerOne === gameScore && playerOne !== 0 && (
+            {playerOne === gameScore && playerOne !== 0 && (
             <div>
               <p>Player One is the Winner!</p>
             </div>
           )}
-          {playerTwo === gameScore && playerTwo !== 0 && (
+            {playerTwo === gameScore && playerTwo !== 0 && (
             <div>
               <p>Player Two is the Winner!</p>
             </div>
@@ -69,9 +69,9 @@ class GameComponent extends Component {
               <Button action={this.incrementGame} buttonTitle='+' />
             </div>
             <div className='game-score__buttons'>
-                {decrement}
+              {decrement}
             </div>
-          <Button className='reset-button' action={this.resetGame} buttonTitle='Reset Game' />
+            <Button className='reset-button' action={this.resetGame} buttonTitle='Reset Game' />
           </div>
         </div>
       </div>

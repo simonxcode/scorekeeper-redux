@@ -5,7 +5,7 @@
 
 .grid-container {
   display: grid;
-  grid-gap: $s-size;
+  grid-gap: 1px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "header header"
@@ -19,12 +19,20 @@
 
 .game-score {
   grid-area: game-score;
+  padding: 50px;
+  text-align: center;
 }
 
-.player-one__container {
+.player-one {
   grid-area: player-one;
+  grid-column: 1/2;
+  padding: 25px;
+  text-align: center;
 }
 
-.player-two__container {
+.player-two {
   grid-area: player-two;
+  grid-column: 2/3;;
+  padding: 25px;
+  text-align: center;
 }

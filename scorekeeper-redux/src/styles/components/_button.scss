@@ -1,8 +1,36 @@
+// .game-score__buttons-container {
+//   display: inline-block;
+// }
+
+.game-score__button-increment, .game-score__button-decrement {
+  display: inline-block;
+  // border: none;
+  // border-bottom: .3rem solid darken(white,10%);
+  // color: white;
+  // font-size: $m-size;
+  // padding: $xs-size 0 $xs-size 0;
+  // width: 25%;
+}
+
 .reset-button {
   background: $orange;
+  border: none;
+  border-bottom: .3rem solid darken($orange, 10%);
+  color: white;
+  font-size: $s-size;
+  padding: $xs-size 0 $xs-size 0;
+  border-radius: $xs-size;
+  width: 15%;
 }
 
 .player-increment__button {
   background: $green;
+  border: none;
+  border-bottom: .3rem solid darken($green, 10%);
+  color: white;
+  font-size: $m-size;
+  font-weight: bold;
+  border-radius: $xs-size;
+  width: 15%;
 }
 

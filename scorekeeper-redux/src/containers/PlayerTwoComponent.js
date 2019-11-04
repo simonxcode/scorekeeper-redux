@@ -74,7 +74,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onIncrementTwo: (playerTwo) => {
-      console.log('Incrementing Player 2')
       dispatch(incrementTwo(playerTwo))
     }
   }

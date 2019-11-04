@@ -4,11 +4,12 @@
 }
 
 .game-score__title {
-  margin: 0; //what does this actually do?
+  font-size: $l-size;
 }
 
 .game-score__winning-score {
-  font-size: $l-size;  
+  font-size: $xl-size;  
+  padding-top: $l-size;
   font-family: lcd phone;
 }
 
@@ -16,6 +17,3 @@
   font-size: $l-size;
 }
 
-.game-score__buttons {
-  display: inline-block;
-}

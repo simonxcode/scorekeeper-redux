@@ -6,11 +6,12 @@
 }
 
 .player-one__title, .player-two__title {
-  margin: 0; //what does this actually do?
+  font-size: $m-size;
 }
 
 .player-one__score, .player-two__score {
-  font-size: $l-size;
+  font-size: $xl-size;
+  padding: $s-size;
   font-family: lcd phone;
 }
 

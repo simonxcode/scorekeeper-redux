@@ -65,11 +65,13 @@ class GameComponent extends Component {
               <p>Player Two is the Winner!</p>
             </div>
           )}
-            <div className='game-score__buttons'>
-              <Button action={this.incrementGame} buttonTitle='+' />
-            </div>
-            <div className='game-score__buttons'>
-              {decrement}
+            <div className='game-score__button-container'>
+              <div className='game-score__button-increment'>
+                <Button action={this.incrementGame} buttonTitle='+' />
+              </div>
+              <div className='game-score__button-decrement'>
+                {decrement}
+              </div>
             </div>
             <Button className='reset-button' action={this.resetGame} buttonTitle='Reset Game' />
           </div>

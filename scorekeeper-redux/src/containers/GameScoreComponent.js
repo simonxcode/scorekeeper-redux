@@ -25,6 +25,7 @@ class GameComponent extends Component {
     if (gameScore === playerOne) {
       decrement = (
         <Button 
+          className='game-score__button-decrement'
           action={this.decrementGame} 
           buttonTitle='-' 
           disabled={true}
@@ -33,6 +34,7 @@ class GameComponent extends Component {
     } else if (gameScore === playerTwo) {
       decrement = (
         <Button 
+          className='game-score__button-decrement'
           action={this.decrementGame} 
           buttonTitle='-' 
           disabled={true}
@@ -41,6 +43,7 @@ class GameComponent extends Component {
     } else {
       decrement = (
         <Button 
+          className='game-score__button-decrement'
           action={this.decrementGame} 
           buttonTitle='-' 
           disabled={false}
@@ -66,14 +69,16 @@ class GameComponent extends Component {
             </div>
           )}
             <div className='game-score__button-container'>
-              <div className='game-score__button-increment'>
-                <Button action={this.incrementGame} buttonTitle='+' />
-              </div>
-              <div className='game-score__button-decrement'>
+                <Button 
+                  className='game-score__button-increment'
+                  action={this.incrementGame} buttonTitle='+' 
+                />
                 {decrement}
-              </div>
             </div>
-            <Button className='reset-button' action={this.resetGame} buttonTitle='Reset Game' />
+            <Button 
+              className='reset-button' 
+              action={this.resetGame} buttonTitle='Reset Game' 
+            />
           </div>
         </div>
       </div>

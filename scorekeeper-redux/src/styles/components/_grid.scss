@@ -6,11 +6,11 @@
 .grid-container {
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "header header"
-    "game-score game-score"
-    "player-one player-two"
+    "header header header header"
+    "game-score game-score game-score game-score"
+    "player-one player-one player-two player-player-two"
 }
 
 .header {
@@ -19,20 +19,26 @@
 
 .game-score {
   grid-area: game-score;
-  padding: 50px;
+  padding: 25px 150px 25px 150px;
+  border: 25px;
   text-align: center;
+  max-width: 400px;
+  margin: auto;
 }
 
 .player-one {
   grid-area: player-one;
-  grid-column: 1/2;
-  padding: 25px;
+  grid-column: 2/3;
+  padding: 15px;
   text-align: center;
+  max-width: 200px;
+  // margin-left:
 }
 
 .player-two {
   grid-area: player-two;
-  grid-column: 2/3;;
-  padding: 25px;
+  grid-column: 3/4;
+  padding: 15px;
   text-align: center;
+  max-width: 200px;
 }

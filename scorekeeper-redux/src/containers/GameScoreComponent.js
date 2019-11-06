@@ -51,7 +51,7 @@ class GameComponent extends Component {
       )  
     }
     return (
-      <div className='game-score'>
+     
         <div className='game-score__title'>
           Playing up to: 
           <div className='game-score__winning-score'>
@@ -81,7 +81,7 @@ class GameComponent extends Component {
             />
           </div>
         </div>
-      </div>
+   
     );
   }
 }

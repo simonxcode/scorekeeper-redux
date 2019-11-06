@@ -48,7 +48,7 @@ class PlayerTwoComponent extends Component {
       )
     }
     return (
-      <div className='player-two'>
+      <div>
         <div className='player-two__title'>
           Player 2:
         </div>

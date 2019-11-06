@@ -10,11 +10,19 @@ import './styles/styles.scss';
 
 render(
   <Provider store={store}>
-  <div className='grid-container'>
     <Header />
-    <GameScoreComponent />
-    <PlayerOneComponent />
-    <PlayerTwoComponent />
+  <div className='container'>
+    <div className='grid-container'>
+      <div className='game-score'>
+        <GameScoreComponent />
+      </div>
+      <div className='player-one'>
+        <PlayerOneComponent />
+      </div>
+      <div className='player-two'>
+        <PlayerTwoComponent />
+      </div>
+    </div>
   </div>
   </Provider>
 

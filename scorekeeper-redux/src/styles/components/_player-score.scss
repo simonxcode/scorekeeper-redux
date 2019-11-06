@@ -1,13 +1,13 @@
 .player-one, .player-two {
   background: $off-black;
   color: $off-white;
-  display: inline-block;
-  margin: $m-size;
+  padding: 15px 0 15px 0;
+  text-align: center;
 }
 
-.player-one__title, .player-two__title {
-  font-size: $m-size;
-}
+// .player-one__title, .player-two__title {
+//   font-size: $m-size;
+// }
 
 .player-one__score, .player-two__score {
   font-size: $xl-size;

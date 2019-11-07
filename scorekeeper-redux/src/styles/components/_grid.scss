@@ -3,71 +3,26 @@
 @import './player-score';
 
 
+
 .grid-container {
   display: grid;
   grid-gap: 1px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
-    "header header header header"
-    "game-score game-score game-score game-score"
-    "player-one player-one player-two player-player-two"
-}
-
-.header {
-  grid-area: header;
+    "game-score game-score"
+    "player-one player-two"
 }
 
 .game-score {
   grid-area: game-score;
-  padding: 25px 175px 25px 175px; 
-  border: 25px;
-  text-align: center;
-  margin: auto;
 }
 
 .player-one {
   grid-area: player-one;
-  grid-column: 2/3;
-  padding: 15px 0 15px 0;
-  text-align: center;
 }
 
 .player-two {
   grid-area: player-two;
-  grid-column: 3/4;
-  padding: 15px 0 15px 0;
-  text-align: center;
 }
 
-//tablet view
-// @media only screen and (min-device-width: 768px) {
-//   .game-score {
-//     text-align: right;
-//   }
-
-//   .player-one {
-//     text-align: right;
-//   }
-
-//   .player-two {
-//     text-align: right;
-//   }
-// }
-
-//mobile view
-@media only screen and (min-device-width: 480px) {
-  .game-score {
-    text-align: center;
-  }
-  
-  .player-one {
-    text-align: center;
-    min-width: 200px;
-  }  
-
-  .player-two {
-    text-align: center;
-    min-width: 200px;
-  }
-}
 

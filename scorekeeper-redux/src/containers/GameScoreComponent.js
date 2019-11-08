@@ -22,7 +22,7 @@ class GameComponent extends Component {
     let decrement;
 
     //prevent game score from falling below player's score
-    if (gameScore === playerOne) {
+    if (gameScore === playerOne || gameScore === 1) {
       decrement = (
         <Button 
           className='game-score__button-decrement'
@@ -31,7 +31,7 @@ class GameComponent extends Component {
           disabled={true}
         />
       )
-    } else if (gameScore === playerTwo) {
+    } else if (gameScore === playerTwo || gameScore === 1) {
       decrement = (
         <Button 
           className='game-score__button-decrement'
@@ -51,37 +51,39 @@ class GameComponent extends Component {
       )  
     }
     return (
-     
-        <div className='game-score__title'>
-          Playing up to: 
-          <div className='game-score__winning-score'>
-            {gameScore}
+      <div>
+        <div>
+          <div className='game-score__title'>
+            Playing up to: 
           </div>
-          <div className='game-score__winning-message'>
+            {playerOne !== gameScore && playerTwo !== gameScore && (
+              <div className='game-score__winning-score'> 
+                {gameScore}
+              </div>
+            )}
             {playerOne === gameScore && playerOne !== 0 && (
-            <div>
-              <p>Player One is the Winner!</p>
-            </div>
-          )}
-            {playerTwo === gameScore && playerTwo !== 0 && (
-            <div>
-              <p>Player Two is the Winner!</p>
-            </div>
-          )}
-            <div className='game-score__button-container'>
-                <Button 
-                  className='game-score__button-increment'
-                  action={this.incrementGame} buttonTitle='+' 
-                />
-                {decrement}
-            </div>
-            <Button 
-              className='reset-button' 
-              action={this.resetGame} buttonTitle='Reset Game' 
-            />
-          </div>
+              <div>
+                <p>Player One is the Winner!</p>
+              </div>
+              )}
+              {playerTwo === gameScore && playerTwo !== 0 && (
+              <div>
+                <p>Player Two is the Winner!</p>
+              </div>
+              )}
         </div>
-   
+        <div className='game-score__button-container'>
+            <Button 
+              className='game-score__button-increment'
+              action={this.incrementGame} buttonTitle='+' 
+            />
+            {decrement}
+        </div>
+        <Button 
+          className='reset-button' 
+          action={this.resetGame} buttonTitle='Reset Game' 
+        />
+    </div>
     );
   }
 }

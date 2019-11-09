@@ -1,9 +1,9 @@
 .game-score {
-  background: $blue;
+  background: $off-black;
   color: $off-white;
   padding: 25px 175px 25px 175px;
-  border: .3rem solid lighten($blue, 5%);
-  text-align: center;
+  border: .3rem solid lighten($off-black, 5%);
+  text-align: center; 
 }
 
 .game-score__title {
@@ -14,9 +14,11 @@
   font-size: $xl-size;  
   padding: $l-size;
   font-family: lcd phone;
+  color: white;
 }
 
 .game-score__winning-message, p {
   font-size: $l-size;
+  font-style: italic;
 }
 

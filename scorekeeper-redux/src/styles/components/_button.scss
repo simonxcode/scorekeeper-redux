@@ -12,7 +12,7 @@ button {
   min-width: 100px;
 }
 
-.game-score__button-increment, .game-score__button-decrement {
+.game-score__button {
   border: none;
   border-bottom: .3rem solid darken(white,15%);
   font-size: $s-size;
@@ -24,7 +24,7 @@ button {
   width: $l-size;
 }
 
-.game-score__button-increment:active, .game-score__button-decrement:active {
+.game-score__button:active, .game-score__button:active {
   background: darken(white, 10%);
 }
 

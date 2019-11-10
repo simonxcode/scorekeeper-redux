@@ -6,6 +6,10 @@
   text-align: center; 
 }
 
+.game-score > div {
+  margin: 0 auto;
+}
+
 .game-score__title {
   font-size: $l-size;
 }
@@ -20,5 +24,14 @@
 .game-score__winning-message, p {
   font-size: $l-size;
   font-style: italic;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .container, .game-score > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 

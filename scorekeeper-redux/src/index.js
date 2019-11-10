@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import PlayerOneComponent from './containers/PlayerOneComponent';
-import PlayerTwoComponent from './containers/PlayerTwoComponent';
 import GameScoreComponent from './containers/GameScoreComponent';
 import Header from './components/Header';
+import PlayerOneComponent from './containers/PlayerOneComponent';
+import PlayerTwoComponent from './containers/PlayerTwoComponent';
+import  'normalize.css/normalize.css';
 import store from './store';
 import './styles/styles.scss';
 

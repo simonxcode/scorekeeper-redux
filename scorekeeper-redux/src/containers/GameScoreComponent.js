@@ -63,12 +63,12 @@ class GameComponent extends Component {
             )}
             {playerOne === gameScore && playerOne !== 0 && (
               <div>
-                <p>Player One is the Winner!</p>
+                <p>Player 1 is the winner!</p>
               </div>
               )}
               {playerTwo === gameScore && playerTwo !== 0 && (
               <div>
-                <p>Player Two is the Winner!</p>
+                <p>Player 2 is the winner!</p>
               </div>
               )}
         </div>

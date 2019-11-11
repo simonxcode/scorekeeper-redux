@@ -22,3 +22,12 @@
   font-style: italic;
 }
 
+@media (max-width: $mobile-breakpoint) {
+  .container, .game-score > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

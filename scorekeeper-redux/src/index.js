@@ -25,9 +25,8 @@ render(
       </div>
     </div>
   </div>
-  </Provider>
-
-,
+  </Provider>,
+  
   document.getElementById('root')
 );
 

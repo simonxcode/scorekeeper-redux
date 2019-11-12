@@ -30,7 +30,7 @@ class GameComponent extends Component {
           buttonTitle='-' 
           disabled={true}
         />
-      )
+      );
     } else if (gameScore === playerTwo || gameScore === 1) {
       decrement = (
         <Button 
@@ -48,7 +48,7 @@ class GameComponent extends Component {
           buttonTitle='-' 
           disabled={false}
         /> 
-      )  
+      );
     }
     return (
       <div>
@@ -110,4 +110,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 } 
 
-export default connect(mapStateToProps, mapDispatchToProps)(GameComponent)
+export default connect(mapStateToProps, mapDispatchToProps)(GameComponent);

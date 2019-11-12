@@ -27,7 +27,7 @@ class PlayerTwoComponent extends Component {
           buttonTitle='+'
           disabled={true}
         />
-      )
+      );
     } else if(gameScore === playerOne) {
       incrementButtonTwo = (
         <Button 
@@ -36,7 +36,7 @@ class PlayerTwoComponent extends Component {
           buttonTitle='+'
           disabled={true}
         />
-      )
+      );
     } else {
       incrementButtonTwo = (  
         <Button 
@@ -45,7 +45,7 @@ class PlayerTwoComponent extends Component {
           buttonTitle='+'
           disabled={false}
         />
-      )
+      );
     }
     return (
       <div>

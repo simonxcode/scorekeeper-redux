@@ -12,7 +12,7 @@ class PlayerOneComponent extends Component {
     const {playerTwo}=this.props
     const {gameScore}=this.props
 
-    //container for storing Button element to increment player 2 score
+    //container for storing Button element to increment player 1 score
     let incrementButtonOne;
    
     /*
@@ -27,7 +27,7 @@ class PlayerOneComponent extends Component {
           buttonTitle='+'
           disabled={true}
         />
-      )
+      );
     } else if(gameScore === playerTwo) {
       incrementButtonOne = (
         <Button 
@@ -36,7 +36,7 @@ class PlayerOneComponent extends Component {
           buttonTitle='+'
           disabled={true}
         />
-      )
+      );
     } else {
       incrementButtonOne = (
         <Button  
@@ -45,7 +45,7 @@ class PlayerOneComponent extends Component {
           buttonTitle='+'
           disabled={false}
         />
-      )
+      );
     }
     return (
       <div>

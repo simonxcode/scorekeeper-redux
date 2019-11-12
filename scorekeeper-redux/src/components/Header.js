@@ -10,6 +10,6 @@ const Header = (props) => (
 Header.defaultProps = {
   title: 'Score Keeper App',
   subtitle: 'Always be a good sport'
-}; 
+}
 
 export default Header;

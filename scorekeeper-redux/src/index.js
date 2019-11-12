@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
 import GameScoreComponent from './containers/GameScoreComponent';
 import Header from './components/Header';
 import PlayerOneComponent from './containers/PlayerOneComponent';
@@ -26,7 +26,7 @@ render(
     </div>
   </div>
   </Provider>,
-  
+
   document.getElementById('root')
 );
 

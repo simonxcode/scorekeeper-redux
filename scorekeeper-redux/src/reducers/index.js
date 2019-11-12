@@ -3,7 +3,6 @@ import gameScoreReducer from './GameScoreReducer';
 import playerOneReducer from './PlayerOneReducer';
 import playerTwoReducer from './PlayerTwoReducer';
 
-
 const rootReducer = (state, action) => {
   if (action.type === 'RESET_GAME') {
     state = undefined;

@@ -4,7 +4,7 @@
 - The first player who score's matches game score is the winner
 - Game score actions are increment, decrement and reset
 
-*Example Screen shot goes here*
+![screen shot](scorekeeper-redux/public/images/screenShot.jpg)
 
 ## Usuage
 

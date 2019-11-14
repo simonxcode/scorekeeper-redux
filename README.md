@@ -1,32 +1,42 @@
 # Score Keeper App
 > A score tracker between 2 players where game score can be adjusted
 
-- The first player who score's matches game score is the winner
+- The first player matching game score is the winner
 - Game score actions are increment, decrement and reset
 
 ![screen shot](scorekeeper-redux/public/images/screenShot.jpg)
 
-## Usuage
+## Installation
+1. Clone repo by running `git clone https://github.com/simonxcode/scorekeeper-redux.git` in your terminal
 
-1. Navigate to workspace on your machine where you want to clone repo
-- ex: storing repo folder on desktop(command line would look like this)
-    - `Users-MacBook-Pro-2:Desktop User$`
-
-2. Clone repo by running `git clone https://github.com/simonxcode/scorekeeper-redux.git` in your terminal
-
-3. Install dependecies  
+2. Install dependecies  
 `npm install`
 
-4. Run application in development mode(at localhost:3000)  
+3. Run application in development mode(at [localhost:3000](http://localhost:3000/))  
 `npm run start`
 
-5. Build and compiles appliation for production  
+4. Build and compiles application for production  
 `npm run build` 
 
-## Contributing
+## Contribute
+1. Create your feature branch  
+`git checkout -b feature/fooBar` 
+
+2. Add and commit your changes 
+```
+git add .
+git commit -m "changes made with fooBar"
+```
+3. Push to branch  
+`git push origin feature/fooBar`
+
+4. Create a new Pull Request 
 
 ## Credit
+LCD font by [Grafito Design](https://www.fontspace.com/grafito-design)  
 
 ## License
+This project is licensed under Unlicense license. This license does not require you to take the license with you to your project.
+
 
 
